@@ -3,15 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "build": "npm-run-all build:* --sequential --print-name",
-    "build:rspack": "RSPACK=1 pnpm rspack -c ./config.mjs",
     "build:rsbuild": "rsbuild build",
-    "build:webpack": "WEBPACK=1 pnpm webpack -c ./config.mjs",
-    "dev:rspack": "RSPACK=1 rspack dev -c ./config.mjs",
-    "dev:rsbuild": "rsbuild dev",
-    "dev:webpack": "WEBPACK=1 webpack serve -c ./config.mjs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:webpack": "webpack"
   },
   "keywords": [],
   "author": "",
@@ -21,10 +16,22 @@
     "@rspack/core": "^0.6.3",
     "html-webpack-plugin": "^5.6.0",
     "webpack": "^5.90.3",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "single-spa-react": "^6.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
+    "prop-types": "^15.8.1"
   },
   "devDependencies": {
+    "@rsbuild/plugin-react": "^0.6.8",
+    "@rsbuild/plugin-type-check": "^0.6.8",
+    "@rsbuild/plugin-node-polyfill": "^0.6.8",
     "@rsbuild/core": "^0.6.6",
-    "npm-run-all": "^4.1.5"
+    "tsconfig-paths-webpack-plugin": "^4.1.0",
+    "mini-css-extract-plugin": "^2.9.0",
+    "node-polyfill-webpack-plugin": "^3.0.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.1.6"
   }
 }
